@@ -17,44 +17,31 @@ export function Welcome() {
 
     }
     
-    return (
-        
+    return ( 
         <SafeAreaView style={styles.container}>   
-            
             <View style={styles.wrapper}>
-
                 <Text style={styles.title}>
                     Manage {'\n'}
                     your plants {'\n'} 
                     easily
                 </Text>
-
                 <Image 
                     source={wateringImg} 
                     style={styles.image} 
                     resizeMode="contain"
                 />
-
                 <Text style={styles.subtitle}>
                     Don't forget to water your plants anymore. We will take care of reminding you whenever you need it.
                 </Text>
-
                 <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleStart} >
-                    
                         <Feather 
                             name="chevron-right" 
                             style={styles.buttonIcon} 
                         />
-                    
                 </TouchableOpacity>
-        
-
             </View>
-            
         </SafeAreaView>
-
     )
-
 }
 
 const styles = StyleSheet.create({

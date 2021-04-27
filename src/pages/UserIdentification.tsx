@@ -38,50 +38,35 @@ export function UserIdentification() {
     return (
 
         <SafeAreaView style={styles.container}>
-
             <KeyboardAvoidingView // Usado caso o usario tiver um IOS
                 style={styles.container}
                 behavior={Platform.OS == 'ios' ? 'padding' : 'height'}  
             >
-
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-
                     <View style={styles.content}>
-
                         <View style={styles.form}>
-                            
                             <View style={styles.header}>
-
                                 <Text style={styles.emoji}>
                                     { isFilled ? '😄' : '😅' }
                                 </Text>
-
                                 <Text style={styles.title}>
                                     What can we {'\n'}
                                     call you?
                                 </Text>
-
                             </View>
-
                             <TextInput style={[styles.input, (isFocused || isFilled) && { borderColor: colors.green } ]} 
                                 placeholder="Your Name" 
                                 onBlur={handleInputBlur} 
                                 onFocus={handleInputFocus} 
                                 onChangeText={handleInputChange}
                             />
-
                             <View style={styles.footer}>
                                 <Button title="Confirm" onPress={handleSubmit} />
                             </View>
-
                         </View>
-
                     </View>
-
                 </TouchableWithoutFeedback>
-
             </KeyboardAvoidingView>
-
         </SafeAreaView>
 
     )

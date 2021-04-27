@@ -16,10 +16,7 @@ export default function App() {
     return <AppLoading /> // Pra garantir que o APP abra somente com as fontes carregadas.
 
   return (
-
     <Routes />
-   
   )
-
 }
 
